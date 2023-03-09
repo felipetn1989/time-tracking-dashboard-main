@@ -894,6 +894,19 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.text-\[\] {
+  color: ;
+}
+
+.text-\[\#b\] {
+  color: #b;
+}
+
+.text-\[\#bdc\] {
+  --tw-text-opacity: 1;
+  color: rgb(187 221 204 / var(--tw-text-opacity));
+}
+
 :root {
   /* ### Primary */
   --Blue: #5847eb;
