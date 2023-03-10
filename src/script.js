@@ -8,15 +8,17 @@ async function data() {
   selectTime.forEach((period,index) => {
     period.addEventListener("click", (event) => {;
       period.classList.toggle("selected");
+      selectedIndex = index
+      console.log(selectedIndex)
       for (let j = 0; j < selectTime.length; j++) {
         if (selectTime[j] !== event.target) {
           selectTime[j].classList.remove("selected")
         }
       }
     });
-
-
   });
+
+  let frames = ["daily","weekly","monthly"]
 
 
   for (let i = 0; i < json.length; i++) {
