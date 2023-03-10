@@ -1,5 +1,5 @@
 const selectTime = document.querySelectorAll(".select_timeframe");
-let selectedIndex = 0;
+let selectedIndex = 1;
 
 async function data() {
   const response = await fetch("https://api.npoint.io/7c3c76337e088202d05b");
@@ -7,6 +7,8 @@ async function data() {
 
   const period = ["daily","weekly","monthly"]
   const time = ["Day","Week","Month"]
+
+  trackingBlocks.innerHTML = ""
 
   for (let i = 0; i < json.length; i++) {
     let colors = [
@@ -30,10 +32,10 @@ async function data() {
               json[i].title
             }</span>
             <img class="ellipsis" src="../images/icon-ellipsis.svg" alt="" aria-hidden="true">
-            <span class="hours leading-6 text-white text-3xl font-light tracking-tight">${
+            <span class="hours leading-6 text-white text-3xl font-light tracking-wide font-sans">${
               json[i].timeframes[period[selectedIndex]]["current"]
             }hrs</span>
-            <span class="place-self-end text-sm">Last ${time[selectedIndex]} - ${
+            <span class="place-self-end text-sm tracking-tight">Last ${time[selectedIndex]} - ${
               json[i].timeframes[period[selectedIndex]]["previous"]
             }hrs </span>
           </div>
