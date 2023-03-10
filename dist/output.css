@@ -534,64 +534,12 @@ video {
   margin-top: 1rem;
 }
 
-.mt-0 {
-  margin-top: 0px;
-}
-
-.mb-\[\] {
-  margin-bottom: ;
-}
-
-.mb-\[-1rem\] {
-  margin-bottom: -1rem;
-}
-
-.mb-\[-1\.25rem\] {
-  margin-bottom: -1.25rem;
-}
-
-.mb-\[-1\.5rem\] {
-  margin-bottom: -1.5rem;
-}
-
 .flex {
   display: flex;
 }
 
 .grid {
   display: grid;
-}
-
-.h-8 {
-  height: 2rem;
-}
-
-.h-10 {
-  height: 2.5rem;
-}
-
-.h-4 {
-  height: 1rem;
-}
-
-.h-5 {
-  height: 1.25rem;
-}
-
-.h-6 {
-  height: 1.5rem;
-}
-
-.h-40 {
-  height: 10rem;
-}
-
-.h-32 {
-  height: 8rem;
-}
-
-.h-24 {
-  height: 6rem;
 }
 
 .h-20 {
@@ -655,6 +603,12 @@ video {
   row-gap: 0.75rem;
 }
 
+.space-y-\[-1\.125rem\] > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(-1.125rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(-1.125rem * var(--tw-space-y-reverse));
+}
+
 .place-self-end {
   place-self: end;
 }
@@ -688,79 +642,6 @@ video {
 .bg-\[\#5847eb\] {
   --tw-bg-opacity: 1;
   background-color: rgb(88 71 235 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#ff8c66\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 140 102 / var(--tw-bg-opacity));
-}
-
-.bg-\[--work\] {
-  background-color: --work;
-}
-
-.bg-\[var\(--work\)\] {
-  background-color: var(--work);
-}
-
-.bg-\[var\(--\)\] {
-  background-color: var(--);
-}
-
-.bg-\[var\(--\$\{data\.\}\)\] {
-  background-color: var(--${data.});
-}
-
-.bg-\[var\(--\$\{json\}\)\] {
-  background-color: var(--${json});
-}
-
-.bg-\[var\(--\$\)\] {
-  background-color: var(--$);
-}
-
-.bg-\[var\(--\$\{\}\)\] {
-  background-color: var(--${});
-}
-
-.bg-\[var\(--\$\{jason\}\)\] {
-  background-color: var(--${jason});
-}
-
-.bg-\[var\(--\$\{json\[i\]\}\)\] {
-  background-color: var(--${json[i]});
-}
-
-.bg-\[var\(--\$\{json\[i\]\.\}\)\] {
-  background-color: var(--${json[i].});
-}
-
-.bg-\[var\(--\$\{json\[i\]\.title\.\}\)\] {
-  background-color: var(--${json[i].title.});
-}
-
-.bg-\[var\(--\$\{json\[i\]\.title\.toLowerCAse\(\)\}\)\] {
-  background-color: var(--${json[i].title.toLowerCAse()});
-}
-
-.bg-\[var\(--\$\{json\[i\]\.title\.toLowerCase\(\)\}\)\] {
-  background-color: var(--${json[i].title.toLowerCase()});
-}
-
-.bg-\[var\(--\$\{json\[1\]\.title\.toLowerCase\(\)\}\)\] {
-  background-color: var(--${json[1].title.toLowerCase()});
-}
-
-.bg-\[var\(--\$\{\"play\"\}\)\] {
-  background-color: var(--${"play"});
-}
-
-.bg-\[var\(--\$\{play\}\)\] {
-  background-color: var(--${play});
-}
-
-.bg-\[var\(--play\)\] {
-  background-color: var(--play);
 }
 
 .px-6 {
@@ -844,15 +725,15 @@ video {
   /* ### Primary */
   --Blue: #5847eb;
   --work: #ff8c66;
-  --play: hsl(195, 74%, 62%);
-  --study: hsl(348, 100%, 68%);
-  --exercise: hsl(145, 58%, 55%);
-  --social: hsl(264, 64%, 52%);
-  --self-care: hsl(43, 84%, 65%);
+  --play: #56c2e6;
+  --study: #ff5c7c;
+  --exercise: #4acf81;
+  --social: #7536d3;
+  --self-care: #f1c65b;
   /* ### Neutral */
   --Very-dark-blue: #0f1424;
   --Dark-blue: #1c1f4a;
-  --Desaturated-blue: hsl(235, 45%, 61%);
+  --Desaturated-blue: #6f76c8;
   --Pale-Blue: #bdc1ff;
 }
 
@@ -868,6 +749,10 @@ body {
   place-self: end start;
 }
 
+.selected {
+  color: white
+}
+
 .attribution {
   font-size: 0.6875rem;
   text-align: center;
@@ -875,4 +760,23 @@ body {
 
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+.hover\:cursor-pointer:hover {
+  cursor: pointer;
+}
+
+.hover\:bg-\[\#6f76c8\]:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(111 118 200 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-\[\#5847eb\]:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(88 71 235 / var(--tw-bg-opacity));
+}
+
+.hover\:text-white:hover {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
