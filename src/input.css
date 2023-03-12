@@ -39,6 +39,12 @@ body {
   color: white
 }
 
+/* #trackingBlocks {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 5rem;
+} */
+
 .attribution {
   font-size: 0.6875rem;
   text-align: center;

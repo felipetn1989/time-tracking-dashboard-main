@@ -5,10 +5,10 @@ async function data() {
   const response = await fetch("https://api.npoint.io/7c3c76337e088202d05b");
   const json = await response.json();
 
-  const period = ["daily","weekly","monthly"]
-  const time = ["Day","Week","Month"]
+  const period = ["daily", "weekly", "monthly"];
+  const time = ["Day", "Week", "Month"];
 
-  trackingBlocks.innerHTML = ""
+  trackingBlocks.innerHTML = "";
 
   for (let i = 0; i < json.length; i++) {
     let colors = [
@@ -21,8 +21,8 @@ async function data() {
     ];
 
     trackingBlocks.innerHTML += `
-        <div class="grid text-[#bdc1ff]">
-          <div class="block_header grid translate-y-2 h-20 w-full rounded-2xl overflow-hidden z-0">
+        <div class="data_block text-[#bdc1ff]">
+          <div class="block_header grid h-20 w-full translate-y-2 rounded-2xl overflow-hidden z-0">
             <img class="place-self-end pr-4 translate-y-[-0.6875rem]" src="${
               json[i].image
             }" alt="">
@@ -35,9 +35,11 @@ async function data() {
             <span class="hours leading-6 text-white text-3xl font-light tracking-wide font-sans">${
               json[i].timeframes[period[selectedIndex]]["current"]
             }hrs</span>
-            <span class="place-self-end text-sm tracking-tight">Last ${time[selectedIndex]} - ${
-              json[i].timeframes[period[selectedIndex]]["previous"]
-            }hrs </span>
+            <span class="place-self-end text-sm tracking-tight">Last ${
+              time[selectedIndex]
+            } - ${
+      json[i].timeframes[period[selectedIndex]]["previous"]
+    }hrs </span>
           </div>
         </div>
       `;
@@ -52,6 +54,9 @@ async function data() {
       main.classList.add("hover:cursor-pointer");
       main.classList.add("hover:bg-[#6f76c8]");
     });
+
+    /*     const dataBlocks = document.querySelectorAll(".data_block")
+    dataBlocks[0].style.transform = "translateY(-1.1875rem)"; */
   }
 }
 
@@ -67,6 +72,6 @@ selectTime.forEach((period, index) => {
         selectTime[j].classList.remove("selected");
       }
     }
-    data()
+    data();
   });
 });
