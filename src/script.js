@@ -1,14 +1,14 @@
 const selectTime = document.querySelectorAll(".select_timeframe");
-let selectedIndex = 1;
+let selectedIndex = 1; //index used to determine which timeframe is selected
 
 async function data() {
-  const response = await fetch("https://api.npoint.io/7c3c76337e088202d05b");
+  const response = await fetch("https://api.npoint.io/7c3c76337e088202d05b"); //fecthing the json data
   const json = await response.json();
 
   const period = ["daily", "weekly", "monthly"];
   const time = ["Day", "Week", "Month"];
 
-  trackingBlocks.innerHTML = "";
+  trackingBlocks.innerHTML = ""; //cleaning the trackingBlocks div to avoid displaying more than 6 tracking blocks each time the page is loaded
 
   for (let i = 0; i < json.length; i++) {
     let colors = [
@@ -19,6 +19,8 @@ async function data() {
       "#7536d3",
       "#f1c65b",
     ];
+
+    //creation of the time tracking divs dynamically
 
     trackingBlocks.innerHTML += `
         <div class="data_block text-[#bdc1ff]">
@@ -44,25 +46,22 @@ async function data() {
         </div>
       `;
 
-    const blockHeaders = document.querySelectorAll(".block_header");
+    const blockHeaders = document.querySelectorAll(".block_header"); //adding the colors to the header of the tracking blocks
     blockHeaders.forEach((header, index) => {
       header.style.backgroundColor = colors[index];
     });
 
-    const blockMains = document.querySelectorAll(".block_main");
+    const blockMains = document.querySelectorAll(".block_main"); //adding the hover events
     blockMains.forEach((main) => {
       main.classList.add("hover:cursor-pointer");
       main.classList.add("hover:bg-[#6f76c8]");
     });
-
-    /*     const dataBlocks = document.querySelectorAll(".data_block")
-    dataBlocks[0].style.transform = "translateY(-1.1875rem)"; */
   }
 }
 
 data();
 
-selectTime.forEach((period, index) => {
+selectTime.forEach((period, index) => { //after the json is loaded, adding a click event listener to display the selected timeframe in a different collor and calling the data() function again to correctly display the values corresponding to the correct time frame
   period.addEventListener("click", (event) => {
     period.classList.toggle("selected");
     selectedIndex = index;
