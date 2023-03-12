@@ -1,41 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Time tracking dashboard</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../images/favicon-32x32.png"
+    />
 
-  <link rel="stylesheet" href="../dist/output.css">
-</head>
-<body class="bg-[#0f1424]">
+    <title>Frontend Mentor | Time tracking dashboard</title>
 
-  <header class="mx-6 mt-20 rounded-2xl text-[#bdc1ff] bg-[#1c1f4a]">
-    <div class="bg-[#5847eb] flex justify-between items-center rounded-2xl px-7 py-8">
-      <img class="w-[4.4375rem] border-[3px] rounded-full" src="../images/image-jeremy.png" alt="Headshot of Jeremy Robson">
-      <div class="translate-x-[-0.625rem]"> 
-        <span class="text-sm">Report for</span>
-        <h1 class="text-2xl tracking-tight text-white font-light">Jeremy Robson</h1>
+    <link rel="stylesheet" href="../dist/output.css" />
+  </head>
+  <body class="bg-[white] lg:mx-[8.875rem]">
+    <header class="mx-6 mt-20 rounded-2xl text-[#bdc1ff] bg-[#1c1f4a] lg:mt-0">
+      <div
+        class="bg-[#5847eb] flex justify-between items-center rounded-2xl px-7 py-8 lg:flex-col"
+      >
+        <img
+          class="w-[4.4375rem] border-[3px] rounded-full lg:self-start"
+          src="../images/image-jeremy.png"
+          alt="Headshot of Jeremy Robson"
+        />
+        <div class="translate-x-[-0.625rem]">
+          <span class="text-sm">Report for</span>
+          <h1 class="text-2xl tracking-tight text-white font-light">
+            Jeremy Robson
+          </h1>
+        </div>
       </div>
-    </div>
-    <div class="flex justify-start items-center gap-[3.8125rem] pl-8 py-[1.375rem] lg:flex-col lg:items-start">
-      <span class="select_timeframe hover:text-white hover:cursor-pointer">Daily</span>
-      <span class="selected select_timeframe hover:text-white hover:cursor-pointer">Weekly</span>
-      <span class="select_timeframe translate-x-[-0.75rem] hover:text-white hover:cursor-pointer lg:translate-x-0">Monthly</span>
-    </div>
-  </header>
+      <div
+        class="flex justify-start items-center gap-[3.8125rem] pl-8 py-[1.375rem] lg:flex-col lg:items-start"
+      >
+        <span class="select_timeframe hover:text-white hover:cursor-pointer"
+          >Daily</span
+        >
+        <span
+          class="selected select_timeframe hover:text-white hover:cursor-pointer"
+          >Weekly</span
+        >
+        <span
+          class="select_timeframe translate-x-[-0.75rem] hover:text-white hover:cursor-pointer lg:translate-x-0"
+          >Monthly</span
+        >
+      </div>
+    </header>
 
-  <main id="trackingBlocks" class="mx-6 mt-4 space-y-[-1.125rem]">
+    <main
+      id="trackingBlocks"
+      class="mx-6 mt-4 space-y-[-1.125rem] lg:grid lg:grid-cols-3 lg:space-y-0 lg:mt-0"
+    >
 
-  </main>
+    </main>
 
-  
-  <footer class="attribution lg:place-self-center lg:col-span-2">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="https://github.com/felipetn1989" target="_blank">Felipe Thomé</a>.
-  </footer>
-</body>
-<script src="script.js"></script>
+    <footer class="attribution lg:place-self-center lg:col-span-2">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a href="https://github.com/felipetn1989" target="_blank">Felipe Thomé</a
+      >.
+    </footer>
+  </body>
+  <script src="script.js"></script>
 </html>

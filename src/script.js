@@ -38,8 +38,8 @@ async function data() {
             <span class="place-self-end text-sm tracking-tight">Last ${
               time[selectedIndex]
             } - ${
-      json[i].timeframes[period[selectedIndex]]["previous"]
-    }hrs </span>
+              json[i].timeframes[period[selectedIndex]]["previous"]
+            }hrs </span>
           </div>
         </div>
       `;

@@ -36,14 +36,8 @@ body {
 }
 
 .selected {
-  color: white
+  color: white;
 }
-
-/* #trackingBlocks {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  margin-top: 5rem;
-} */
 
 .attribution {
   font-size: 0.6875rem;
@@ -52,4 +46,26 @@ body {
 
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 60em) {
+  body {
+    display: grid;
+    grid-template-areas: 
+    'one two'
+    'three three'
+    ;
+  }
+
+  header {
+    grid-area: one;
+  }
+
+  main {
+    grid-area: two;
+  }
+
+  footer {
+    grid-area: three;
+  }
 }

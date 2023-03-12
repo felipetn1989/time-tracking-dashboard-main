@@ -579,6 +579,11 @@ video {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.translate-y-0 {
+  --tw-translate-y: 0px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
@@ -646,6 +651,11 @@ video {
 .bg-\[\#5847eb\] {
   --tw-bg-opacity: 1;
   background-color: rgb(88 71 235 / var(--tw-bg-opacity));
+}
+
+.bg-\[white\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
 .px-6 {
@@ -762,14 +772,8 @@ body {
 }
 
 .selected {
-  color: white
+  color: white;
 }
-
-/* #trackingBlocks {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  margin-top: 5rem;
-} */
 
 .attribution {
   font-size: 0.6875rem;
@@ -778,6 +782,28 @@ body {
 
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 60em) {
+  body {
+    display: grid;
+    grid-template-areas: 
+    'one two'
+    'three three'
+    ;
+  }
+
+  header {
+    grid-area: one;
+  }
+
+  main {
+    grid-area: two;
+  }
+
+  footer {
+    grid-area: three;
+  }
 }
 
 .hover\:cursor-pointer:hover {
@@ -799,9 +825,96 @@ body {
     grid-column: span 2 / span 2;
   }
 
+  .lg\:mx-4 {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .lg\:mx-8 {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
+  .lg\:mx-20 {
+    margin-left: 5rem;
+    margin-right: 5rem;
+  }
+
+  .lg\:mx-40 {
+    margin-left: 10rem;
+    margin-right: 10rem;
+  }
+
+  .lg\:mx-44 {
+    margin-left: 11rem;
+    margin-right: 11rem;
+  }
+
+  .lg\:mx-\[10\.25rem\] {
+    margin-left: 10.25rem;
+    margin-right: 10.25rem;
+  }
+
+  .lg\:mx-\[10\.125rem\] {
+    margin-left: 10.125rem;
+    margin-right: 10.125rem;
+  }
+
+  .lg\:mx-\[10rem\] {
+    margin-left: 10rem;
+    margin-right: 10rem;
+  }
+
+  .lg\:mx-\[9\.75rem\] {
+    margin-left: 9.75rem;
+    margin-right: 9.75rem;
+  }
+
+  .lg\:mx-\[9\.5rem\] {
+    margin-left: 9.5rem;
+    margin-right: 9.5rem;
+  }
+
+  .lg\:mx-\[9rem\] {
+    margin-left: 9rem;
+    margin-right: 9rem;
+  }
+
+  .lg\:mx-\[8\.9375rem\] {
+    margin-left: 8.9375rem;
+    margin-right: 8.9375rem;
+  }
+
+  .lg\:mx-\[8\.7rem\] {
+    margin-left: 8.7rem;
+    margin-right: 8.7rem;
+  }
+
+  .lg\:mx-\[8\.rem\] {
+    margin-left: 8.rem;
+    margin-right: 8.rem;
+  }
+
+  .lg\:mx-\[8\.875rem\] {
+    margin-left: 8.875rem;
+    margin-right: 8.875rem;
+  }
+
+  .lg\:mt-0 {
+    margin-top: 0px;
+  }
+
+  .lg\:grid {
+    display: grid;
+  }
+
   .lg\:translate-x-0 {
     --tw-translate-x: 0px;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .lg\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .lg\:flex-col {
@@ -812,7 +925,17 @@ body {
     align-items: flex-start;
   }
 
+  .lg\:space-y-0 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(0px * var(--tw-space-y-reverse));
+  }
+
   .lg\:place-self-center {
     place-self: center;
+  }
+
+  .lg\:self-start {
+    align-self: flex-start;
   }
 }
