@@ -22,20 +22,20 @@ async function data() {
 
     trackingBlocks.innerHTML += `
         <div class="data_block text-[#bdc1ff]">
-          <div class="block_header grid h-20 w-full translate-y-2 rounded-2xl overflow-hidden z-0">
+          <div class="block_header grid h-20 w-full translate-y-2 rounded-2xl overflow-hidden z-0 lg:translate-y-0">
             <img class="place-self-end pr-4 translate-y-[-0.6875rem]" src="${
               json[i].image
             }" alt="">
           </div>
-          <div class="block_main grid gap-y-3 grid-cols-2 bg-[#1c1f4a] px-6 pt-[1.625rem] pb-9 z-10 rounded-2xl translate-y-[-2rem]">
-            <span class="font-bold text-white tracking-tight">${
+          <div class="block_main grid gap-y-3 grid-cols-2 bg-[#1c1f4a] px-6 pt-[1.625rem] pb-9 z-10 rounded-2xl translate-y-[-2rem] lg:px-8 lg:grid-cols-[unset] lg:gap-y-10 lg:pb-5">
+            <span class="tracking_title font-bold text-white tracking-tight">${
               json[i].title
             }</span>
             <img class="ellipsis" src="../images/icon-ellipsis.svg" alt="" aria-hidden="true">
-            <span class="hours leading-6 text-white text-3xl font-light tracking-wide font-sans">${
+            <span class="hours leading-6 text-white text-3xl font-light tracking-wide font-sans lg:text-[3.375rem]">${
               json[i].timeframes[period[selectedIndex]]["current"]
             }hrs</span>
-            <span class="place-self-end text-sm tracking-tight">Last ${
+            <span class="previous_hours place-self-end text-sm tracking-tight lg:place-self-start lg:translate-y-[-0.5rem]">Last ${
               time[selectedIndex]
             } - ${
               json[i].timeframes[period[selectedIndex]]["previous"]

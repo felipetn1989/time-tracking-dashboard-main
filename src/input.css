@@ -42,6 +42,7 @@ body {
 .attribution {
   font-size: 0.6875rem;
   text-align: center;
+  color: white;
 }
 
 .attribution a {
@@ -68,5 +69,28 @@ body {
 
   footer {
     grid-area: three;
+  }
+
+  .block_main {
+    grid-template-areas: 
+    'one two'
+    'three three'
+    'four four';
+  }
+
+  .tracking_title {
+    grid-area: one;
+  }
+
+  .ellipsis {
+    grid-area: two;
+  }
+
+  .hours {
+    grid-area: three;
+  }
+
+  .previous_hours {
+    grid-area: four;
   }
 }
