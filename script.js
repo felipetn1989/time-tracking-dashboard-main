@@ -2,7 +2,7 @@ const selectTime = document.querySelectorAll(".select_timeframe");
 let selectedIndex = 1; //index used to determine which timeframe is selected
 
 async function data() {
-  const response = await fetch("https://api.npoint.io/7c3c76337e088202d05b"); //fecthing the json data
+  const response = await fetch("https://api.npoint.io/395e3b408449f7d7efa9"); //fecthing the json data
   const json = await response.json();
 
   const period = ["daily", "weekly", "monthly"];
