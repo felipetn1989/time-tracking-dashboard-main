@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Time tracking dashboard</title>
+
+    <link rel="stylesheet" href="dist/output.css" />
+  </head>
+  <body class="bg-[#0f1424] lg:mx-[8.875rem] lg:mt-[15.8125rem]">
+    <header class="mx-6 mt-20 rounded-2xl text-[#bdc1ff] bg-[#1c1f4a] lg:mt-0">
+      <div
+        class="bg-[#5847eb] flex justify-between items-center rounded-2xl px-7 py-8 lg:flex-col lg:gap-9 lg:pb-20"
+      >
+        <img
+          class="w-[4.4375rem] border-[3px] rounded-full lg:self-start lg:w-[5.25rem]"
+          src="images/image-jeremy.png"
+          alt="Headshot of Jeremy Robson"
+        />
+        <div class="translate-x-[-0.625rem] lg:translate-x-1">
+          <span class="text-sm">Report for</span>
+          <h1 class="text-2xl tracking-tight text-white font-light lg:text-4xl lg:mt-[0.25rem] lg:leading-[2.875rem] lg:tracking-normal">
+            Jeremy Robson
+          </h1>
+        </div>
+      </div>
+      <div
+        class="flex justify-start items-center gap-[3.8125rem] pl-8 py-[1.375rem] lg:flex-col lg:items-start lg:gap-[1.1875rem] lg:py-[1.5625rem]"
+      >
+        <span class="select_timeframe hover:text-white hover:cursor-pointer"
+          >Daily</span
+        >
+        <span
+          class="selected select_timeframe hover:text-white hover:cursor-pointer"
+          >Weekly</span
+        >
+        <span
+          class="select_timeframe translate-x-[-0.75rem] hover:text-white hover:cursor-pointer lg:translate-x-0"
+          >Monthly</span
+        >
+      </div>
+    </header>
+
+    <main
+      id="trackingBlocks"
+      class="mx-6 mt-4 space-y-[-1.125rem] lg:grid lg:grid-cols-3 lg:space-y-0 lg:mt-0 lg:mx-1.5 lg:gap-7 lg:mr-[1.5625rem] lg:gap-y-0 lg:mb-[-2rem]"
+    >
+
+    </main>
+
+    <footer class="attribution lg:place-self-center lg:col-span-2 lg:mt-4">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a href="https://github.com/felipetn1989" target="_blank">Felipe Thomé</a
+      >.
+    </footer>
+  </body>
+  <script src="script.js"></script>
+</html>
