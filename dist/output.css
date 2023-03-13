@@ -579,10 +579,6 @@ video {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.transform {
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
 .grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
@@ -777,12 +773,14 @@ body {
 
 @media screen and (min-width: 60em) {
   body {
+    height: 100vh;
     display: grid;
     grid-template-areas: 
     'one two'
     'three three'
     ;
     grid-template-columns: 1fr 2.83fr;
+    place-content: center start;
   }
 
   header {
@@ -957,10 +955,6 @@ body {
     place-self: center;
   }
 
-  .lg\:self-start {
-    align-self: flex-start;
-  }
-
   .lg\:px-8 {
     padding-left: 2rem;
     padding-right: 2rem;
@@ -977,6 +971,22 @@ body {
 
   .lg\:pb-5 {
     padding-bottom: 1.25rem;
+  }
+
+  .lg\:pt-4 {
+    padding-top: 1rem;
+  }
+
+  .lg\:pt-5 {
+    padding-top: 1.25rem;
+  }
+
+  .lg\:pt-6 {
+    padding-top: 1.5rem;
+  }
+
+  .lg\:pt-7 {
+    padding-top: 1.75rem;
   }
 
   .lg\:text-4xl {
